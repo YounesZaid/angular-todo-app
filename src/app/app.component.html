@@ -5,7 +5,7 @@
 <div class="container">
   <form>
     <div class="form-group">
-      <h1 class="text-center text-primary">Todo App</h1>
+      <h1 class="text-center">Todo App</h1>
       <div class="input-group-prepend">
         <input
           [(ngModel)]="todo"
@@ -14,9 +14,19 @@
           placeholder="Add Todo"
           name="todo"
         />
-        <span class="input-group-text" (click)="addTodo(todo)">Add</span>
+        <span class="input-group-text" (click)="addTodo(todo)"
+          ><i class="material-icons">add</i></span
+        >
       </div>
-      <p>{{ todo }}</p>
+      <!-- <p>{{ todo }}</p> -->
+      <div class="data">
+        <ul class="list-instyled">
+          <li *ngFor="let todo of todosArray">
+            {{ todo }}
+            <i (click)="deleteItem(todo)" class="material-icons">delete</i>
+          </li>
+        </ul>
+      </div>
     </div>
   </form>
   <!-- get the value of the input -->
