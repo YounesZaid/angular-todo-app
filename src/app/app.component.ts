@@ -9,4 +9,10 @@ export class AppComponent {
   title = "angular-todo-app";
 
   todo = "";
+  todosArray = [];
+
+  addTodo = value => {
+    this.todosArray.push(value);
+    console.log(this.todosArray);
+  };
 }

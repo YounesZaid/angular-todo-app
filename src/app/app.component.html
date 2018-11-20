@@ -14,7 +14,7 @@
           placeholder="Add Todo"
           name="todo"
         />
-        <span class="input-group-text">Add</span>
+        <span class="input-group-text" (click)="addTodo(todo)">Add</span>
       </div>
       <p>{{ todo }}</p>
     </div>
