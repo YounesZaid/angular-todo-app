@@ -21,9 +21,9 @@
       <!-- <p>{{ todo }}</p> -->
       <div class="data">
         <ul class="list-instyled">
-          <li *ngFor="let todo of todosArray">
+          <li [@moveInLeft] *ngFor="let todo of todosArray; index as i">
             {{ todo }}
-            <i (click)="deleteItem(todo)" class="material-icons">delete</i>
+            <i (click)="deleteItem(i)" class="material-icons">delete</i>
           </li>
         </ul>
       </div>
